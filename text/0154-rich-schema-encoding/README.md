@@ -25,7 +25,7 @@ and avoid hashed values as much as possible, as they do not support
 predicate proofs.
 
 Encoding objects are processed in a generic way defined in 
-[Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common).
+[Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common).
 
 
 ## Motivation
@@ -64,7 +64,7 @@ is stored on the ledger.
 
 ### Properties
 
-Encoding's properties follow the generic template defined in [Rich Schema Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
+Encoding's properties follow the generic template defined in [Rich Schema Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
 
 Encoding's `content` field is a JSON-serialized string with the following fields:
 
@@ -191,7 +191,7 @@ There is a write request handler for `RICH_SCHEMA_ENCODING` transaction.
 The numerical code for a `RICH_SCHEMA_ENCODING` transaction is `202`.
 
 An Encoding can be obtained from the Ledger by the generic `GET_RICH_SCHEMA_OBJECT_BY_ID` and `GET_RICH_SCHEMA_OBJECT_BY_METADATA`
-requests (see [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
+requests (see [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_ID` transaction is `300`.
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_METADATA` transaction is `301`.
 
@@ -239,11 +239,11 @@ transformation algorithm implementation is correct.
         
 The combination of `rsType`, `rsName`, and `rsVersion` must be unique among all rich schema objects on the ledger.
 
-The generic patterns for `RICH_SCHEMA_ENCODING` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
+The generic patterns for `RICH_SCHEMA_ENCODING` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
 
 ### Indy VDR API
 Indy VDR methods for adding and retrieving an Encoding from the
-ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
+ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
 
 This means the following methods can be used:
 - `indy_vdr_build_rich_schema_object_request`
@@ -261,13 +261,13 @@ Here is the paper that defines
 [Camenisch-Lysyanskaya signatures.][CL-signatures] 
 [CL-signatures]: (https://groups.csail.mit.edu/cis/pubs/lysyanskaya/cl02b.pdf)
 
-- [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)
-- [0120: Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common) 
-- [Common write request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
-- [Common read request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-request-structure)
-- [Common transaction structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/transactions.md#common-structure)
-- [Common reply structure for write requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
-- [Common reply structure for read requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
+- [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)
+- [0120: Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common) 
+- [Common write request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
+- [Common read request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-request-structure)
+- [Common transaction structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/transactions.md#common-structure)
+- [Common reply structure for write requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
+- [Common reply structure for read requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
 
 
 
@@ -299,7 +299,7 @@ privacy implications of submitting attribute values to a public ledger.
 
 A description of a prior effort to add encodings to Indy may be found in
 this [jira ticket](https://jira.hyperledger.org/browse/IS-786) and 
-[pull request](https://github.com/hyperledger/indy-sdk/pull/1048).
+[pull request](https://github.com/hyperledger-indy/indy-sdk/pull/1048).
 
 What the prior effort lacked was a corresponding enhancement of schema
 infrastructure which would have provided the necessary typing of attribute

@@ -16,7 +16,7 @@ New location: [aries-rfcs/features/0019-encryption-envelope](https://github.com/
   links to impls or derivative ideas; if superseded, link to replacement)
 
 ## Summary
-There are two layers of messages that combine to enable **interoperable** self-sovereign agent-to-agent communication. At the highest level are [Agent Plaintext Messages](https://github.com/hyperledger/indy-hipe/tree/master/text/0026-agent-file-format#agent-plaintext-messages-ap) - messages sent between identities to accomplish some shared goal (e.g., establishing a connection, issuing a verifiable credential, sharing a chat). Agent Plaintext Messages are delivered via the second, lower layer of messaging - Wire. An [Agent Wire Message](https://github.com/hyperledger/indy-hipe/tree/master/text/0026-agent-file-format#agent-wire-messages-aw) is a wrapper (envelope) around a plaintext message to permit secure sending and routing. A plaintext message going from its sender to its receiver passes through many agents, and a wire message envelope is used for each hop of the journey.
+There are two layers of messages that combine to enable **interoperable** self-sovereign agent-to-agent communication. At the highest level are [Agent Plaintext Messages](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0026-agent-file-format#agent-plaintext-messages-ap) - messages sent between identities to accomplish some shared goal (e.g., establishing a connection, issuing a verifiable credential, sharing a chat). Agent Plaintext Messages are delivered via the second, lower layer of messaging - Wire. An [Agent Wire Message](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0026-agent-file-format#agent-wire-messages-aw) is a wrapper (envelope) around a plaintext message to permit secure sending and routing. A plaintext message going from its sender to its receiver passes through many agents, and a wire message envelope is used for each hop of the journey.
 
 This HIPE describes the wire format and the functions in Indy SDK that implement it.
 
@@ -102,7 +102,7 @@ When packing and unpacking are done in a way that the sender is anonymous,
 we say that we are in __anoncrypt mode__. When the sender is revealed, we
 are in __authcrypt mode__. Authcrypt mode reveals the sender *to the recipient
 only*; it is not the same as a non-repudiable signature. See the [HIPE about
-signing](https://github.com/hyperledger/indy-hipe/pull/79), and [this
+signing](https://github.com/hyperledger-indy/indy-hipe/pull/79), and [this
 discussion about the theory of non-repudiation](https://github.com/sovrin-foundation/protocol/blob/d1039cd793a801abdc5fdfdc25ef071778039075/janus/repudiation.md).
 
 ### Pack Message
@@ -195,7 +195,7 @@ The base64URL encoded `protected` decodes to this:
 4. encrypt the `message` using libsodium.crypto_aead_chacha20poly1305_ietf_encrypt_detached(message, protected_value_encoded, iv, cek) this is the ciphertext.
 5. base64URLencode the iv, ciphertext, and tag then serialize the format into the output format listed above.
 
-For a reference implementation, see https://github.com/hyperledger/indy-sdk/blob/master/libindy/src/commands/crypto.rs
+For a reference implementation, see https://github.com/hyperledger-indy/indy-sdk/blob/master/libindy/src/commands/crypto.rs
 
 #### pack_message() return value (Anoncrypt mode)
 This is an example of an outputted message encrypted for two verkeys using Anoncrypt.
@@ -265,7 +265,7 @@ The protected data decodes to this:
 4. encrypt the message using libsodium.crypto_aead_chacha20poly1305_ietf_encrypt_detached(message, protected_value_encoded, iv, cek) this is the ciphertext.
 5. base64URLencode the iv, ciphertext, and tag then serialize the format into the output format listed above.
 
-For a reference implementation, see https://github.com/hyperledger/indy-sdk/blob/master/libindy/src/commands/crypto.rs
+For a reference implementation, see https://github.com/hyperledger-indy/indy-sdk/blob/master/libindy/src/commands/crypto.rs
 
 ### Unpack Message
 
@@ -297,7 +297,7 @@ unpacked_message = unpack_message(wallet_handle, jwe)
 
 
 
-For a reference implementation, see https://github.com/hyperledger/indy-sdk/blob/master/libindy/src/commands/crypto.rs
+For a reference implementation, see https://github.com/hyperledger-indy/indy-sdk/blob/master/libindy/src/commands/crypto.rs
 
 #### unpack_message() return values (authcrypt mode)
 

@@ -436,10 +436,10 @@ callbacks. It may also allow supporting or auxiliary data (other than what the
 wallet directly persists) to be associated with the export/import payload.
 
 For technical details on how export and import work, please see the [internal
-design docs](https://github.com/hyperledger/indy-sdk/tree/master/docs/design/009-wallet-export-import).
+design docs](https://github.com/hyperledger-indy/indy-sdk/tree/master/docs/design/009-wallet-export-import).
 
 ## Reference
-- [Wallet Design](https://github.com/hyperledger/indy-sdk/tree/master/docs/design/003-wallet-storage)
+- [Wallet Design](https://github.com/hyperledger-indy/indy-sdk/tree/master/docs/design/003-wallet-storage)
 
 ## Rationale and alternatives
 We could implement wallets purely as built already in the cryptocurrency world.

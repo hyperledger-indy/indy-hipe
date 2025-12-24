@@ -14,7 +14,7 @@ New location: [aries-rfcs/concepts/0008-message-id-and-threading](https://github
 
 ## Summary
 Definition of the message @id field and the ~thread [decorator](
-https://github.com/hyperledger/indy-hipe/pull/71).
+https://github.com/hyperledger-indy/indy-hipe/pull/71).
 
 ## Motivation
 Referring to messages is useful in many interactions. A standard method of adding a message ID promotes good patterns in message families. When multiple messages are coordinated in a message flow, the threading pattern helps avoid having to re-roll the same spec for each message family that needs it.
@@ -23,7 +23,7 @@ Referring to messages is useful in many interactions. A standard method of addin
 ### Message IDs
 
 Message IDs are specified with the @id attribute, which [comes from JSON-LD](
-https://github.com/hyperledger/indy-hipe/blob/3d8ec6c522cacaaef20b3a999f3c75b5b1217b70/text/json-ld-compatibility/README.md#id).
+https://github.com/hyperledger-indy/indy-hipe/blob/3d8ec6c522cacaaef20b3a999f3c75b5b1217b70/text/json-ld-compatibility/README.md#id).
 The sender of the message is responsible for creating the message ID, and any
 message can be identified by the combination of the sender and the message ID.
 Message IDs should be considered to be opaque identifiers by any recipients.
@@ -32,7 +32,7 @@ Message IDs should be considered to be opaque identifiers by any recipients.
 
 - A short stream of characters matching regex `[-_./a-ZA-Z0-9]{8,64}` (Note the
   [special semantics of a dotted suffix on IDs](
-  https://github.com/hyperledger/indy-hipe/blob/996adb82e61ab63b37a56254b92f57100ff8c8d9/text/message-tracing/README.md#message-ids),
+  https://github.com/hyperledger-indy/indy-hipe/blob/996adb82e61ab63b37a56254b92f57100ff8c8d9/text/message-tracing/README.md#message-ids),
   as described in the message tracing HIPE proposal)
 - Should be compared case-sensitive (no case folding)
 - Sufficiently unique
@@ -52,7 +52,7 @@ The following was pulled from [this document](https://raw.githubusercontent.com/
 
 
 ### Threaded Messages
-Message threading will be implemented as a [decorator](https://github.com/hyperledger/indy-hipe/pull/71) to messages, for example:
+Message threading will be implemented as a [decorator](https://github.com/hyperledger-indy/indy-hipe/pull/71) to messages, for example:
 
 ```json
 {

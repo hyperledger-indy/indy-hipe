@@ -61,9 +61,9 @@ creates a `ping` message like this:
 
 Only `@type` and `@id` are required; `~timing.out_time`, `~timing.expires_time`, and `~timing.delay_milli`
 are optional [message timing decorators](
-https://github.com/hyperledger/indy-hipe/pull/68), and `comment`
+https://github.com/hyperledger-indy/indy-hipe/pull/68), and `comment`
 follows the conventions of [localizable message fields](
-https://github.com/hyperledger/indy-hipe/pull/64). If present, it may
+https://github.com/hyperledger-indy/indy-hipe/pull/64). If present, it may
 be used to display a human-friendly description of the ping to a user
 that gives approval to respond. (Whether an agent responds to a trust
 ping is a decision for each agent owner to make, per policy and/or
@@ -109,11 +109,11 @@ messages are encrypted with suitable algorithms and keys.
 
 2. Messages may be targeted at any known agent in the other party's sovereign
 domain, using [cross-domain routing conventions](
-https://github.com/hyperledger/indy-hipe/blob/master/text/0022-cross-domain-messaging/README.md),
+https://github.com/hyperledger-indy/indy-hipe/blob/master/text/0022-cross-domain-messaging/README.md),
 and may be encrypted and
 packaged to expose exactly and only the information desired, at each hop
 along the way. This allows two parties to evaluate the completeness of
 a channel and the alignment of all agents that maintain it.
 
 3. This interaction may be traced using the general [message tracing
-mechanism](https://github.com/hyperledger/indy-hipe/pull/60).
+mechanism](https://github.com/hyperledger-indy/indy-hipe/pull/60).

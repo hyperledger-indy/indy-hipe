@@ -45,7 +45,7 @@ https://docs.google.com/document/d/1gfIz5TT0cNp2kxGMLFXr19x1uoZsruUe_0glHst2fZ8/
 (or, for agents of things like IoT devices, pets, and similar things, a single _controller_). 
 2. It holds cryptographic keys that uniquely embody its delegated authorization.
 3. It interacts using interoperable [DID Comm protocols](
-https://github.com/hyperledger/indy-hipe/pull/69).
+https://github.com/hyperledger-indy/indy-hipe/pull/69).
 
 These characteristics don't tie an agent to Indy or to a blockchain
 that has Indy DNA. It is possible to implement agents without any
@@ -57,7 +57,7 @@ quite active.
 Three types of agents are especially common:
 
 1. A mobile app that Alice uses to manage credentials and to [connect
-to others](https://github.com/hyperledger/indy-hipe/pull/54) is an
+to others](https://github.com/hyperledger-indy/indy-hipe/pull/54) is an
 agent for Alice.
 2. A cloud-based service that Alice uses to expose a stable endpoint
 where other agents can talk to her is an agent for Alice.
@@ -82,8 +82,8 @@ characteristics](#essential-characteristics) described above.
 #### How Agents Talk
 
 [DID communication](
-https://github.com/hyperledger/indy-hipe/blob/b0708395fd1669df33a9619efa7770a20c97006e/text/0003-did-comm/README.md)
-(DIDComm), and the [protocols built atop it](https://github.com/hyperledger/indy-hipe/pull/69)
+https://github.com/hyperledger-indy/indy-hipe/blob/b0708395fd1669df33a9619efa7770a20c97006e/text/0003-did-comm/README.md)
+(DIDComm), and the [protocols built atop it](https://github.com/hyperledger-indy/indy-hipe/pull/69)
 are each rich subjects unto themselves. Here, we will stay very high-level.
 
 Agents can use many different communication transports: HTTP(S)
@@ -98,10 +98,10 @@ https://github.com/dhh1128/indy-hipe/blob/a2a/text/0003-a2a/README.md)
 are standard.
 
 Agents connect to one another through a standard [connection
-protocol](https://github.com/hyperledger/indy-hipe/pull/54),
+protocol](https://github.com/hyperledger-indy/indy-hipe/pull/54),
 discover one another's endpoints and keys through standard DID
 Docs, [discover one another's features](
-https://github.com/hyperledger/indy-hipe/pull/73) in a standard way,
+https://github.com/hyperledger-indy/indy-hipe/pull/73) in a standard way,
 and maintain relationships in a standard way. All of these points of
 standardization are what makes them interoperable.
 
@@ -136,7 +136,7 @@ ready-to-use agent offerings, please describe your use case in
 There is also intense activity in the SSI community around building
 custom agents and the tools and processes that enable them. Some of
 this work is happening in the [indy-agent repo on github.com](
-https://github.com/hyperledger/indy-agent); other efforts are driven
+https://github.com/hyperledger-indy/indy-agent); other efforts are driven
 by the [Sovrin Foundation](https://sovrin.org) or other entities.
 
 The indy-agent repo on github.com has _reference_ agents and a test
@@ -171,7 +171,7 @@ Here are some thought questions to clarify intent:
 We said it's hard to provide a recipe for an agent without specifics.
 However, the majority of agents _do_ have two things in common:
 they listen to and process A2A messages, and they use a [wallet](
-https://github.com/hyperledger/indy-hipe/blob/master/text/0013-wallets/README.md)
+https://github.com/hyperledger-indy/indy-hipe/blob/master/text/0013-wallets/README.md)
 to manage keys, credentials, and other sensitive material. Unless you have
 uses cases that involve IoT, cron jobs, or web hooks, your agent is
 likely to fit this mold.
@@ -235,26 +235,26 @@ in the DID Doc of the recipient, and finding an intersection
 between transports they use, and transports the sender can
 speak. Line 3 requires the keys of the sender, which would
 normally be held in a [wallet](
-https://github.com/hyperledger/indy-hipe/blob/master/text/0013-wallets/README.md).
+https://github.com/hyperledger-indy/indy-hipe/blob/master/text/0013-wallets/README.md).
 
 If you are building this sort of code using Indy technology, you
 will certainly want to use [Indy SDK](
-https://github.com/hyperledger/indy-sdk/blob/master/README.md).
+https://github.com/hyperledger-indy/indy-sdk/blob/master/README.md).
 This gives you a ready-made,
 highly secure wallet that can be adapted to many requirements.
 It also provides easy functions to serialize and encrypt. Many
 of the operations you need to do are demonstrated in the SDK's
 [/doc/how-tos folder](
-https://github.com/hyperledger/indy-sdk/blob/master/docs/how-tos/README.md),
+https://github.com/hyperledger-indy/indy-sdk/blob/master/docs/how-tos/README.md),
 or in its Getting Started Guide.
 
 #### How to Learn More
 
 * Hang out and ask questions on `#indy-agent` on [chat.hyperledger.org](https://chat.hyperledger.org).
 * Use the mailing list: [hyperledger-indy@lists.hyperledger.org](mailto:hyperledger-indy@lists.hyperledger.org)
-* Study the reference agents and agent test suite in the [indy-agent repo on github.com](https://github.com/hyperledger/indy-agent). 
+* Study the reference agents and agent test suite in the [indy-agent repo on github.com](https://github.com/hyperledger-indy/indy-agent). 
 * Study the sample mobile agent at [github.com/sovrin-foundation/connector-app](https://github.com/sovrin-foundation/connector-app).
-* Browse other [HIPEs](https://github.com/hyperledger/indy-hipe/tree/master/text) and [proposed HIPEs](https://github.com/hyperledger/indy-hipe/pulls).
+* Browse other [HIPEs](https://github.com/hyperledger-indy/indy-hipe/tree/master/text) and [proposed HIPEs](https://github.com/hyperledger-indy/indy-hipe/pulls).
 * Attend the indy-agent working group on Wednesdays. (See [HL community calendar](https://wiki.hyperledger.org/display/HYP/Calendar+of+Public+Meetings) for details; note that the default timezone is GMT.)
 * Review [this slide deck](
   https://docs.google.com/presentation/d/1w_5yf08wfqV0Z-WJLqE5Nh_IVgcMACLWyNw0XjrgTVI/edit)
@@ -353,7 +353,7 @@ agent-like things include:
 
 ###### Identity Wallets
 "Identity wallet" is a term that's [carefully defined](
-https://github.com/hyperledger/indy-hipe/blob/master/text/0013-wallets/README.md#what-is-an-identity-wallet)
+https://github.com/hyperledger-indy/indy-hipe/blob/master/text/0013-wallets/README.md#what-is-an-identity-wallet)
 in our ecosystem, and in strict, technical usage it maps to a
 concept much closer to "database" than "agent". This is because
 it is an inert storage container, not an active interacter. However, in

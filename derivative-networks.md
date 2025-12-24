@@ -6,7 +6,7 @@ answers to questions about deployment, update rules, security hardening, policie
 for how identity roles (trustee, steward, trust anchor...) will be used, and such.
 These are legitimate topics for improvement proposals, but because they could be
 answered differently by different groups standing up an Indy network, they don't
-belong in [indy-hipe](https://github.com/hyperledger/indy-hipe).
+belong in [indy-hipe](https://github.com/hyperledger-indy/indy-hipe).
 
 The [Sovrin Foundation](https://sovrin.org) is an example of a group that uses
 Indy technology for its network, and that has this need for supplemental

@@ -9,7 +9,7 @@
   links to impls or derivative ideas; if superseded, link to replacement)
 
 ## Summary
-Indy will replace [indy-crypto](https://github.com/hyperledger/indy-crypto) with [ursa](https://github.com/hyperledger/ursa)
+Indy will replace [indy-crypto](https://github.com/hyperledger-indy/indy-crypto) with [ursa](https://github.com/hyperledger/ursa)
 as its library for handling encryption, key exchange, signing, and anonymous credentials.
 
 

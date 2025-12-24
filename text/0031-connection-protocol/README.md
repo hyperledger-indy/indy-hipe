@@ -160,7 +160,7 @@ If `routingKeys` is present and non-empty, additional forwarding wrapping will b
 
 The endpoint for the connection is either present in the invitation or available in the DID Document of a presented DID. If the endpoint is not a URI but a DID itself, that DID refers to an Agency.
 
-In that case, the `serviceEndpoint` of the DID must be a URI, and the `recipientKeys` must contain a single key. That key is appended to the end of the list of `routingKeys` for processing. For more information about message forwarding and routing, see [HIPE 22](https://github.com/hyperledger/indy-hipe/tree/master/text/0022-cross-domain-messaging).
+In that case, the `serviceEndpoint` of the DID must be a URI, and the `recipientKeys` must contain a single key. That key is appended to the end of the list of `routingKeys` for processing. For more information about message forwarding and routing, see [HIPE 22](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0022-cross-domain-messaging).
 
 #### Standard Invitation Encoding
 
@@ -406,7 +406,7 @@ Upon establishing a connection, it is likely that both Alice and Bob will want t
 * https://docs.google.com/document/d/1mRLPOK4VmU9YYdxHJSxgqBp19gNh3fT7Qk4Q069VPY8/edit#heading=h.7sxkr7hbou5i
 * [Agent to Agent Communication Video](https://drive.google.com/file/d/1PHAy8dMefZG9JNg87Zi33SfKkZvUvXvx/view)
 * [Agent to Agent Communication Presentation](https://docs.google.com/presentation/d/1H7KKccqYB-2l8iknnSlGt7T_sBPLb9rfTkL-waSCux0/edit#slide=id.p)
-* Problem_report message adopted into message family, following form defined by the [Problem Report HIPE](https://github.com/hyperledger/indy-hipe/blob/6a5e4fe2d7e14953cd8e3aed07d886176332e696/text/error-handling/README.md)
+* Problem_report message adopted into message family, following form defined by the [Problem Report HIPE](https://github.com/hyperledger-indy/indy-hipe/blob/6a5e4fe2d7e14953cd8e3aed07d886176332e696/text/error-handling/README.md)
 * Useful QR Code Generator: https://zxing.appspot.com/generator/
 
 # Drawbacks

@@ -254,7 +254,7 @@ especially with current indy-node functionality, is extremely complex. It is mad
 more complex when credentials can be both revoked and "unrevoked."
 
 To retrieve revocation information (accumulators plus witnesses) from an Indy ledger, 
-this [indy-node read transaction](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#get_revoc_reg_delta) is executed.
+this [indy-node read transaction](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#get_revoc_reg_delta) is executed.
 Note that like the proof request, there is an interval specified in the indy-node call with `from` and `to` parameters.
 However the semantic meaning of the indy-node call interval is quite different than that of the proof request. The
 `get_revoc_reg_delta` interval returns the ledger accumulators at either end of the interval, and the set of
@@ -307,7 +307,7 @@ now easy to summarize:
 
 ## Reference
 Technical details of the design are available [here](
-https://github.com/hyperledger/indy-sdk/blob/23dbaac654256a50c203e97a250d68fd932609ce/doc/design/002-anoncreds/README.md). 
+https://github.com/hyperledger-indy/indy-sdk/blob/23dbaac654256a50c203e97a250d68fd932609ce/doc/design/002-anoncreds/README.md). 
 
 ## Drawbacks
 * Revocation adds complexity to issuance, proving, and verification.

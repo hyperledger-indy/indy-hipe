@@ -352,7 +352,7 @@ This document draws on a number of other documents, most notably the
 The signature types used here are the same as those currently used.
 Here is the paper that defines
 [Camenisch-Lysyanskaya signatures.][CL-signatures] They are the source for
-[Indy's AnonCreds protocol](https://github.com/hyperledger/indy-hipe/pull/109).
+[Indy's AnonCreds protocol](https://github.com/hyperledger-indy/indy-hipe/pull/109).
 
 The intent of rich schemas is to work alongside the current credential
 scheme.

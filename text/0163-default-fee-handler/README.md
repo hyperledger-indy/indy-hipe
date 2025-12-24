@@ -18,20 +18,20 @@ Adding a default fee handler to Indy will make it easier to maintain ledgers wit
 ## Motivation
 [motivation]: #motivation
 
-Indy Plenum can be extended through the use of [ledger plugins](https://github.com/hyperledger/indy-plenum/blob/master/docs/source/plugins.md). Ledger plugins can introduce new transaction types that are either stored on existing ledgers, or on new ledgers created by the plugins. The [Sovrin Network](http://sovrin.org) used this capability to develop a [token plugin for Indy](https://github.com/sovrin-foundation/token-plugin) that stored fee and value transfer transactions on a token ledger. After experimenting with the plugin, [a plan was made to remove it](https://github.com/sovrin-foundation/sovrin-sip/tree/master/text/5005-token-removal/README.md).
+Indy Plenum can be extended through the use of [ledger plugins](https://github.com/hyperledger-indy/indy-plenum/blob/master/docs/source/plugins.md). Ledger plugins can introduce new transaction types that are either stored on existing ledgers, or on new ledgers created by the plugins. The [Sovrin Network](http://sovrin.org) used this capability to develop a [token plugin for Indy](https://github.com/sovrin-foundation/token-plugin) that stored fee and value transfer transactions on a token ledger. After experimenting with the plugin, [a plan was made to remove it](https://github.com/sovrin-foundation/sovrin-sip/tree/master/text/5005-token-removal/README.md).
 
 Removing the Sovrin token plugin has three important consequences:
 * The data stored on the custom ledger created by the plugin will be deleted.
 * The audit ledger will no longer be able to obtain the root hash of any custom ledgers from the plugin.
 * Any authorization rules (auth_rules) on the config ledger that define fees as being necessary to authorize writes to the domain ledger can no longer be handled by the plugin.
 
-The first consequence is intended. The second consequence is [treated in a separate HIPE](https://github.com/hyperledger/indy-hipe/tree/master/text/0162-frozen-ledgers). This HIPE proposes a feature to address the last consequence.
+The first consequence is intended. The second consequence is [treated in a separate HIPE](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0162-frozen-ledgers). This HIPE proposes a feature to address the last consequence.
 
 
 ## Tutorial
 [tutorial]: #tutorial
 
-[Indy Authorization Rules](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#auth_rule) provide a flexible way of authorizing write transactions to the domain ledger. This authorization can [depend on the payment of fees tracked by ledger plugins](https://github.com/sovrin-foundation/libsovtoken/blob/master/doc/fees.md).
+[Indy Authorization Rules](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#auth_rule) provide a flexible way of authorizing write transactions to the domain ledger. This authorization can [depend on the payment of fees tracked by ledger plugins](https://github.com/sovrin-foundation/libsovtoken/blob/master/doc/fees.md).
 
 Because Indy currently has no native concept of fees, if a plugin that implemented fees is removed, historical transactions can no longer be validated and will prevent new nodes from catching up on the ledger. In many cases it is sufficient to know that the historical transactions were valid at the time of writing. In these cases a default fee handler can approve the historical transactions.
 
@@ -60,7 +60,7 @@ Indy will also look to the default fee handler to determine the execution logic 
 
 The current need for a default fee handler could be avoided by moving the token transactions into Indy as deprecated historical transactions. This would allow the history to be validated, but we don't want Indy to become a graveyard for every transaction type a plugin author defines. Implementing the features proposed in this HIPE is a more generic way to address the problem.
 
-There is a [proposal to incorporate the token plugin as an optional part of Indy](https://github.com/hyperledger/indy-hipe/tree/master/text/0161-generic-token). This would remove the need for the removal of the token plugin from the Sovrin ledger, but no one has volunteered to do that work.
+There is a [proposal to incorporate the token plugin as an optional part of Indy](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0161-generic-token). This would remove the need for the removal of the token plugin from the Sovrin ledger, but no one has volunteered to do that work.
 
 
 ## Prior art

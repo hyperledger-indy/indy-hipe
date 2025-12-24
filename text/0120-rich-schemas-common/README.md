@@ -12,7 +12,7 @@
 A low-level description of the components of an anonymous credential ecosystem that supports rich schemas,
 W3C Verifiable Credentials and Presentations, and correspondingly rich presentation requests. 
 
-Please see [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas) 
+Please see [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas) 
 for high-level description.
 
 This HIPE provides more low-level description of Rich Schema objects defining how they are identified and referenced.
@@ -20,7 +20,7 @@ It also defines a general template and common part for all Rich Schema objects.
 
 ## Motivation
 
-Please see [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)
+Please see [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)
 for use cases and high-level description of why Rich Schemas are needed.
 
 This HIPE serves as a low-level design of common parts between all Rich Schema objects, and can help developers to 
@@ -154,7 +154,7 @@ Any write request for Rich Schema object has the same fields:
 'ver': <format version>                        # string                              
 ```
 - `id` is a unique ID (for example a DID with a id-string being base58 representation of the SHA2-256 hash of the `content` field)
-- The `content` field here contains a Rich Schema object in JSON-LD format (see [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)).
+- The `content` field here contains a Rich Schema object in JSON-LD format (see [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)).
 It's passed and stored as-is.
 The `content` field must be serialized in the canonical form. The canonicalization scheme we recommend is the IETF draft 
  [JSON Canonicalization Scheme (JCS).](https://tools.ietf.org/id/draft-rundgren-json-canonicalization-scheme-16.html)
@@ -344,7 +344,7 @@ Common*
 
 ### Common template for all write requests for Rich Schema objects 
 Every write request for Rich Schema objects follows the 
-[Common write request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
+[Common write request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
  and has the following form:
 ```
 {
@@ -371,7 +371,7 @@ Every write request for Rich Schema objects follows the
 
 ### Common template for all read requests for Rich Schema objects 
 Every read request for Rich Schema objects follows the 
-[Common read request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-request-structure).
+[Common read request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-request-structure).
 
 There are two generic requests to get any Rich Schema objects: `GET_RICH_SCHEMA_OBJECT_BY_ID` and `GET_RICH_SCHEMA_OBJECT_BY_METADATA`: 
 ```
@@ -406,7 +406,7 @@ There are two generic requests to get any Rich Schema objects: `GET_RICH_SCHEMA_
 
 ### Common template for all Rich Schema objects transactions on the Ledger 
 Every Rich Schema object transaction follows the 
-[Common transaction structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/transactions.md#common-structure)
+[Common transaction structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/transactions.md#common-structure)
  and has the following form:
 ```
     'ver': <txn version>,
@@ -465,10 +465,10 @@ where
 ### Common template for Reply to Rich Schema object requests
 
 Reply to write requests for Rich Schema objects follows the 
-[Common reply structure for write requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
+[Common reply structure for write requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
 
 Reply to read requests for Rich Schema objects follows the 
-[Common reply structure for read requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
+[Common reply structure for read requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
 and has the following form:
 ```
 {
@@ -496,12 +496,12 @@ and has the following form:
 
 
 ## Reference
-- [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas) 
-- [Common write request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
-- [Common read request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-request-structure)
-- [Common transaction structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/transactions.md#common-structure)
-- [Common reply structure for write requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
-- [Common reply structure for read requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
+- [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas) 
+- [Common write request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
+- [Common read request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-request-structure)
+- [Common transaction structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/transactions.md#common-structure)
+- [Common reply structure for write requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
+- [Common reply structure for read requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
 
 ## Drawbacks
 

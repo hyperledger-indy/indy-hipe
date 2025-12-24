@@ -2,7 +2,7 @@
 This spec is according [JSON Schema v0.7](https://json-schema.org/specification.html)
 ```json
 {
-    "id": "https://github.com/hyperledger/indy-agent/wiremessage.json",
+    "id": "https://github.com/hyperledger-indy/indy-agent/wiremessage.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "Json Web Message format",
     "type": "object",
