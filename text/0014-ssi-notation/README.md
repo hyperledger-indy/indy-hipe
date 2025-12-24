@@ -723,7 +723,7 @@ LaTeX. It is less ubiquitous.
 * The key management notation introduced in "[DKMS (Decentralized Key Management
 System) V3](http://bit.ly/dkmsv3)" overlaps significantly with the concerns of this notation (render [this
 diagram](
-https://github.com/hyperledger/indy-sdk/blob/677a0439487a1b7ce64c2e62671ed3e0079cc11f/doc/design/005-dkms/08-add-connection-private-did-provisioned.puml
+https://github.com/hyperledger-indy/indy-sdk/blob/677a0439487a1b7ce64c2e62671ed3e0079cc11f/doc/design/005-dkms/08-add-connection-private-did-provisioned.puml
 ) for an example). However, it does not encompass all the concerns
 explored here, so it would have to be expanded before it could be complete.
   Also, experiments with superscripts and subscripts in this format led to semantic

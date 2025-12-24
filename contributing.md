@@ -21,7 +21,7 @@ is a good sign that you're on the right track.
 
 ### How to propose a HIPE
 
-  - Fork [the HIPE repo](https://github.com/hyperledger/indy-hipe).
+  - Fork [the HIPE repo](https://github.com/hyperledger-indy/indy-hipe).
   - Pick a descriptive folder name for your HIPE. Use existing names as
     a pattern.
   - Create the folder and copy `0000-template.md` to `text/<your folder name>/README.md`.

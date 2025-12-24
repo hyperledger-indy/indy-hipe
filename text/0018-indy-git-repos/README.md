@@ -46,9 +46,9 @@ This repository has existed throughout most of the existence of what is now call
 when the node elements that concerned the Sovrin was split from the RBFT ledger. This happened before the project was
 part of Hyperledger. When the project joined Hyperledger, this repository was joined with a client and common repository.
 
-[GitHub Link](https://github.com/hyperledger/indy-node) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-node) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-node/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-node/blob/master/MAINTAINERS.md)
 
 ### indy-plenum
  
@@ -61,9 +61,9 @@ has gone through several iterations but has always contained the codebase curren
 joined Hyperledger, this repository was joined with several small upstream dependent repositories. They combine to
 create the current form.
 
-[GitHub Link](https://github.com/hyperledger/indy-plenum) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-plenum) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-plenum/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-plenum/blob/master/MAINTAINERS.md)
 
 ### indy-sdk
 
@@ -74,35 +74,35 @@ Node pools, digital wallets, crypto functions, credentials, etc.
 It is the official software development kit (SDK) for the Indy Project, and as such presents a main source of technology
 for non-community members.
 
-[GitHub Link](https://github.com/hyperledger/indy-sdk) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-sdk) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-sdk/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-sdk/blob/master/MAINTAINERS.md)
 
 ### indy-hipe
 
 This repository holds HIPEs (Hyperledger Indy Project Enhancements) which is the Indy Project process for project
 collaboration and forming project standards.
 
-[GitHub Link](https://github.com/hyperledger/indy-hipe) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-hipe) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-hipe/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-hipe/blob/master/MAINTAINERS.md)
 
 ### indy-crypto
 
 Contains shared cryptographic codebase for the Indy Project. Ideally, all cryptographic code will be maintained in
 this single repository.
 
-[GitHub Link](https://github.com/hyperledger/indy-crypto) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-crypto) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-crypto/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-crypto/blob/master/MAINTAINERS.md)
 
 ### indy-agent
 
 Contains official Indy Project reference agent implementations and agent protocols test suite.
 
-[GitHub Link](https://github.com/hyperledger/indy-agent) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-agent) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-agent/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-agent/blob/master/MAINTAINERS.md)
 
 ### indy-test-automation
 
@@ -111,26 +111,26 @@ stability testing of Indy Project components.
 
 Test resources that span multiple repositories in function and scope can find a home here.  
 
-[GitHub Link](https://github.com/hyperledger/indy-test-automation) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-test-automation) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-test-automation/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-test-automation/blob/master/MAINTAINERS.md)
 
 ### indy-jenkins-pipeline-lib
 
 Contains a library of reusable Jenkins Pipeline steps and functions for that are used in Hyperledger Indy Projects' CI/CD 
 pipelines. 
 
-[GitHub Link](https://github.com/hyperledger/indy-jenkins-pipeline-lib) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-jenkins-pipeline-lib) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-jenkins-pipeline-lib/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-jenkins-pipeline-lib/blob/master/MAINTAINERS.md)
 
 ### indy-docs
 
 Contains general documentation conceptual information that introduces the Hyperledger Indy project. This repository is built into an html viewable documentation website that is the main portal to view documentation for each of the individual indy repositories. The website can be viewed at http://hyperledger-indy.readthedocs.io
 
-[GitHub Link](https://github.com/hyperledger/indy-docs) (see the README)
+[GitHub Link](https://github.com/hyperledger-indy/indy-docs) (see the README)
 
-[Maintainers Doc](https://github.com/hyperledger/indy-docs/blob/master/MAINTAINERS.md)
+[Maintainers Doc](https://github.com/hyperledger-indy/indy-docs/blob/master/MAINTAINERS.md)
 
 ## Maintenance
 Unless otherwise specified repositories will be maintained by Indy Project maintainers. Every repository will define

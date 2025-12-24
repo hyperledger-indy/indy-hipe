@@ -15,7 +15,7 @@ objects. They are the standard mechanism for defining shared semantic
 meaning among rich schema objects.
 
 Context objects are processed in a generic way defined in 
-[Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common).
+[Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common).
 
 ## Motivation
 [motivation]: #motivation
@@ -56,7 +56,7 @@ An example of the `content` field of a Context object:
 
 ### Stored on Ledger
 `@context` will be written to the ledger in a generic way defined in 
-[Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
+[Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
 
 
 ### Indy Node Context API
@@ -66,7 +66,7 @@ There is a write request handler for `JSON_LD_CONTEXT` transaction.
 The numerical code for a `JSON_LD_CONTEXT` transaction is `200`.
 
 A Context can be obtained from the Ledger by the generic `GET_RICH_SCHEMA_OBJECT_BY_ID` and `GET_RICH_SCHEMA_OBJECT_BY_METADATA`
-requests (see [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
+requests (see [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_ID` transaction is `300`.
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_METADATA` transaction is `301`.
 
@@ -106,13 +106,13 @@ If the Context needs to be evolved, a new Context with a new id and name-version
         
 The combination of `rsType`, `rsName`, and `rsVersion` must be unique among all rich schema objects on the ledger.
 
-The generic patterns for `JSON_LD_CONTEXT` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
+The generic patterns for `JSON_LD_CONTEXT` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
 
 
 
 ### Indy VDR API
 Indy VDR methods for adding and retrieving `@context` from the
-ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
+ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
 
 This means the following methods can be used:
 - `indy_vdr_build_rich_schema_object_request`
@@ -130,13 +130,13 @@ More information on `@context` from the JSON-LD specification may be found
 [here](https://w3c.github.io/json-ld-syntax/#the-context) and
 [here](https://w3c.github.io/json-ld-syntax/#advanced-context-usage).
 
-- [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)
-- [0120: Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common) 
-- [Common write request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
-- [Common read request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-request-structure)
-- [Common transaction structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/transactions.md#common-structure)
-- [Common reply structure for write requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
-- [Common reply structure for read requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
+- [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)
+- [0120: Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common) 
+- [Common write request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
+- [Common read request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-request-structure)
+- [Common transaction structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/transactions.md#common-structure)
+- [Common reply structure for write requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
+- [Common reply structure for read requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
 
 
 ## Drawbacks

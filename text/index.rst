@@ -11,7 +11,7 @@ for short) for chunks of technology or process that are important to standardize
 across the Indy ecosystem.
 
 Below you will see all of our current HIPEs. If you would like to submit a new HIPE, 
-please visit the Github repository: http://github.com/hyperledger/indy-hipe
+please visit the Github repository: http://github.com/hyperledger-indy/indy-hipe
 
 .. toctree::
    :maxdepth: 1

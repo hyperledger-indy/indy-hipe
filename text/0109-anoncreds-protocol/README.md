@@ -587,7 +587,7 @@ using SHA-256, are the same as the 256-bit integers which the issuer signed.
 * [Camenisch-Lysyanskaya Signatures][CL-signatures]
 * [Parirings-based Revocation][pairing-revocation]
 
-[indy-crypto-github]: (https://github.com/hyperledger/indy-crypto/tree/master/libindy-crypto/src/cl)
+[indy-crypto-github]: (https://github.com/hyperledger-indy/indy-crypto/tree/master/libindy-crypto/src/cl)
 [CL-signatures]: (https://groups.csail.mit.edu/cis/pubs/lysyanskaya/cl02b.pdf)
 [pairing-revocation]: (https://eprint.iacr.org/2008/539.pdf)
 

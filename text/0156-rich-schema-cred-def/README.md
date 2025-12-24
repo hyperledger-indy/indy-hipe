@@ -13,14 +13,14 @@
 [summary]: #summary
 
 Credential Definition can be used by the Issuer to set public keys for a particular
- [Rich Schema](https://github.com/hyperledger/indy-hipe/tree/master/text/0149-rich-schema-schema)
-  and [Mapping](https://github.com/hyperledger/indy-hipe/tree/master/text/0155-rich-schema-mapping).
+ [Rich Schema](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0149-rich-schema-schema)
+  and [Mapping](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0155-rich-schema-mapping).
 The public keys can be used for signing the credentials by the Issuer according to the order and encoding of attributes
 defined by the referenced Mapping.
 
 
 Credential Definition objects are processed in a generic way defined in 
-[Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common).
+[Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common).
 
 
 ## Motivation
@@ -59,7 +59,7 @@ credentials issued for this key.
 
 ### Properties
 
-Credential definition's properties follow the generic template defined in [Rich Schema Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
+Credential definition's properties follow the generic template defined in [Rich Schema Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
 
 Credential Definition's `content` field is a JSON-serialized string with the following fields:
 
@@ -95,7 +95,7 @@ property. A Credential Definition is referenced by its `id`.
 
 ### Stored on Ledger
 Credential Definition will be written to the ledger in a generic way defined in 
-[Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
+[Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#how-rich-schema-objects-are-stored-on-the-ledger).
 
 
 ### Indy Node Rich Schema API
@@ -105,7 +105,7 @@ There is a write request handler for `RICH_SCHEMA_CRED_DEF` transaction.
 The numerical code for a `RICH_SCHEMA_CRED_DEF` transaction is `204`.
 
 A Rich Schema can be obtained from the Ledger by the generic `GET_RICH_SCHEMA_OBJECT_BY_ID` and `GET_RICH_SCHEMA_OBJECT_BY_METADATA`
-requests (see [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
+requests (see [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#querying-rich-schema-objects-from-the-ledger)).
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_ID` transaction is `300`.
 The numerical code for a `GET_RICH_SCHEMA_OBJECT_BY_METADATA` transaction is `301`.
 
@@ -144,11 +144,11 @@ Adds a Credential Definition object as part of Rich Schema feature.
         
 The combination of `rsType`, `rsName`, and `rsVersion` must be unique among all rich schema objects on the ledger.
 
-The generic patterns for `RICH_SCHEMA_CRED_DEF` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
+The generic patterns for `RICH_SCHEMA_CRED_DEF` transaction, request, and reply can be found in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#common-template-for-all-write-requests-for-rich-schema-objects).
 
 ### Indy VDR API
 Indy VDR methods for adding and retrieving a Credential Definition from the
-ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
+ledger comply with the generic approach described in [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#indy-vdr-api).
 
 This means the following methods can be used:
 - `indy_vdr_build_rich_schema_object_request`
@@ -162,13 +162,13 @@ This means the following methods can be used:
 More information on the Verifiable Credential data model use of `schemas`
 may be found [here](https://w3c.github.io/vc-data-model/#data-schemas)
 
-- [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)
-- [0120: Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common) 
-- [Common write request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
-- [Common read request structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#common-request-structure)
-- [Common transaction structure](https://github.com/hyperledger/indy-node/blob/master/docs/source/transactions.md#common-structure)
-- [Common reply structure for write requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
-- [Common reply structure for read requests](https://github.com/hyperledger/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
+- [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)
+- [0120: Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common) 
+- [Common write request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-write-request-structure)
+- [Common read request structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#common-request-structure)
+- [Common transaction structure](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/transactions.md#common-structure)
+- [Common reply structure for write requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-write-requests)
+- [Common reply structure for read requests](https://github.com/hyperledger-indy/indy-node/blob/master/docs/source/requests.md#reply-structure-for-read-requests)
 
 
 

@@ -56,7 +56,7 @@ Any Indy credential compatible with W3C standard MUST have the following propert
 JSON-LD Context. The value MUST be an ordered set where 
  - the first item MUST be a URI with the value `https://www.w3.org/2018/credentials/v1`.
  - other items MAY be `@id` of contexts used by the corresponding rich schema and mapping 
- (see [Rich Schema Context](https://github.com/hyperledger/indy-hipe/tree/master/text/0149-rich-schema-schema#context)).
+ (see [Rich Schema Context](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0149-rich-schema-schema#context)).
 
 
 #### type
@@ -66,7 +66,7 @@ It MUST be an unordered set consisting of the following two values:
 - `@id` of a rich schema the credential is created against. 
 
 A credential  MUST be created against one and only one rich schema 
-(see [Relationship between Rich Schema objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#relationship)). 
+(see [Relationship between Rich Schema objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#relationship)). 
 
 #### credentialSchema
 Specifies the credential definition the credential is created against.
@@ -78,7 +78,7 @@ MUST reference the same rich schema as specified in the credential's `type`.
 - `type` equal to the credential definition's type; `cdf` is the only value currently supported.
 
 A credential MUST be created against one and only one credential definition 
-(see [Relationship between Rich Schema objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common#relationship)). 
+(see [Relationship between Rich Schema objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common#relationship)). 
 
 
 #### issuer
@@ -88,7 +88,7 @@ If the credential definition transaction was endorsed to the Ledger by a differe
 the `issuer` property must point to the real transaction's author (`identifier` or `from` field), not 
 the endorser (`endorser` field). 
 
-As `issuer` is a default field in any [Mapping](https://github.com/hyperledger/indy-hipe/tree/master/text/0155-rich-schema-mapping), 
+As `issuer` is a default field in any [Mapping](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0155-rich-schema-mapping), 
 it must be signed as any other attribute from the `credentialSubject`.
 
 #### issuanceDate
@@ -101,7 +101,7 @@ This is the date after which the claims in the credential
  are considered valid by the issuer, which may be different from the date the credential was signed
  by the issuer or received by the holder.
 
-As `issuanceDate` is a default field in any [Mapping](https://github.com/hyperledger/indy-hipe/tree/master/text/0155-rich-schema-mapping), 
+As `issuanceDate` is a default field in any [Mapping](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0155-rich-schema-mapping), 
 it must be signed as any other attribute from  the `credentialSubject`.
  
 #### credentialSubject
@@ -124,7 +124,7 @@ An issuer's ZKP signature that can be used to derive verifiable presentations
 that present information contained in the original verifiable credential in zero-knowledge.
 
 The `proof` must contain a ZKP signature for the `issuer` and `issuanceDate` attributes as required by 
-the [Mapping](https://github.com/hyperledger/indy-hipe/tree/master/text/0155-rich-schema-mapping). 
+the [Mapping](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0155-rich-schema-mapping). 
 `issuer` and `issuanceDate` attributes are signed together with the other attributes from the schema in a common way.
  
 The `proof` MUST contain a `type` property which indicates the ZKP signature scheme used. 
@@ -340,11 +340,11 @@ Let's consider every field in details:
 
 ### Indy Node API
 As Indy credentials are never stored on the Ledger, no changes in `indy-node` repository are required 
-besides general rich schema support (see [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common)).
+besides general rich schema support (see [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common)).
 
 ### Indy VDR API
 As Indy credentials are never stored on the Ledger, no changes in `indy-vdr` repository are required 
-besides general rich schema support (see [Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common)).
+besides general rich schema support (see [Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common)).
 
 ### Indy Credx API
 
@@ -406,8 +406,8 @@ or Anoncreds 2.0 (`CL2`); the Anoncreds version is orthogonal to the Schema and 
 [reference]: #reference
 
 - [W3C Verifiable Credentials Specification](https://w3c.github.io/vc-data-model)
-- [0119: Rich Schema Objects](https://github.com/hyperledger/indy-hipe/tree/master/text/0119-rich-schemas)
-- [0120: Rich Schema Objects Common](https://github.com/hyperledger/indy-hipe/tree/master/text/0120-rich-schemas-common) 
+- [0119: Rich Schema Objects](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0119-rich-schemas)
+- [0120: Rich Schema Objects Common](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0120-rich-schemas-common) 
 
 ## Drawbacks
 [drawbacks]: #drawbacks

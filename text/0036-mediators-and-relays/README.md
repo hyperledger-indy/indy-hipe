@@ -219,8 +219,8 @@ like HTTP, that assume the channel in (request) is also the channel out (respons
 [Duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)) request-response
 can be modeled with A2A, but doing so requires support that may not always be
 available, plus cooperative behavior governed by the [`~thread`](
-https://github.com/hyperledger/indy-hipe/blob/master/text/0027-message-id-and-threading/README.md)
-and [`~please_duplex`](https://github.com/hyperledger/indy-hipe/pull/72) decorators. 
+https://github.com/hyperledger-indy/indy-hipe/blob/master/text/0027-message-id-and-threading/README.md)
+and [`~please_duplex`](https://github.com/hyperledger-indy/indy-hipe/pull/72) decorators. 
 
 #### Conventions on Direction
 
@@ -229,7 +229,7 @@ receiver. We could use many different metaphors to talk about the "closer to sen
 and "closer to receiver" directions -- upstream and downstream, left and right,
 before and after, in and out. We've chosen to standardize on two:
 
-* The [SSI Notation uses directional arrows](https://github.com/hyperledger/indy-hipe/tree/master/text/0014-ssi-notation#other-punctuation).
+* The [SSI Notation uses directional arrows](https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0014-ssi-notation#other-punctuation).
 A message from Alice to Bob is notated as either `A --> B` or `B <-- A` -- whether
 the arrow faces left or right, it always points to Bob. 
 * In text, we use the words __source-ward__ and __dest-ward__ to clarify whether we

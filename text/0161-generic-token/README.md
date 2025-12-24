@@ -138,7 +138,7 @@ Transactions with fees may be added or removed from this list.
 Hyperledger Indy provides the code base for Indy ledgers. This code base may be extended with plugins. Ledger plugins add new transactions and sub-ledgers to the transactions and sub-ledgers already defined by Hyperledger Indy. This document introduces plugins for generic token transactions, which may be incorporated into any Indy ledger.
 
 #### Ledger Plugins
-The process for adding plugins to Hyperledger Indy is explained in [Hyperledger's indy-plenum repository](https://github.com/hyperledger/indy-plenum/blob/master/docs/source/plugins.md).
+The process for adding plugins to Hyperledger Indy is explained in [Hyperledger's indy-plenum repository](https://github.com/hyperledger-indy/indy-plenum/blob/master/docs/source/plugins.md).
 
 Plugins allow for new transactions to be added to an instantiation of Indy, without requiring changes to the core codebase. New sub-ledgers may also be defined using these plugins. A sub-ledger is where the new transactions may be stored.
 
@@ -158,7 +158,7 @@ Note: While the Generic Token plugin and the accompanying payment sub-ledger may
 
 #### Indy-SDK Payments API Plugin
 The Indy-SDK payments API comes with a default payment handler plugin called
-[LibNullPay](https://github.com/hyperledger/indy-sdk/blob/master/libnullpay/README.md). LibNullPay allows for a "null" token to be used with the payments API. The "null" token transactions are dummy transactions. They are not stored on a ledger and do not initiate consensus.
+[LibNullPay](https://github.com/hyperledger-indy/indy-sdk/blob/master/libnullpay/README.md). LibNullPay allows for a "null" token to be used with the payments API. The "null" token transactions are dummy transactions. They are not stored on a ledger and do not initiate consensus.
 
 The payments API allows for other payment handler plugins to be initialized. An Indy-SDK payments API compatible payment handler is proposed in this document:
 - LibToken, which handles generic token payment functionality through the Indy-SDK payments API for the Token and Fees ledger plugins and produces properly formatted and signed transaction requests for each of the new transactions listed above. LibToken also parses the transaction responses from the new ledger plugins through the Indy-SDK payments API.
@@ -173,7 +173,7 @@ responses for the Fees plugin, specifically for the **SET_FEES**, **GET_FEES**,
 **FEES**, **COLLECT_FEES**, and **UNCOLLECTED_FEES** transactions can be
 found here: [Ledger Fee Transactions.](TODO: add link)
 
-Documentation for the Indy-SDK payments API and how to use it may be found here: [Indy SDK Payments API.](https://github.com/hyperledger/indy-sdk/tree/master/docs/design/004-payment-interface)
+Documentation for the Indy-SDK payments API and how to use it may be found here: [Indy SDK Payments API.](https://github.com/hyperledger-indy/indy-sdk/tree/master/docs/design/004-payment-interface)
 
 An example of the structure of the inputs and outputs of the LibToken payment handler plugin for the Indy-SDK payments API are documented here: [Token specific data structures.](https://github.com/sovrin-foundation/libsovtoken/blob/master/doc/data_structures.md) (from LibToken's predecessor LibSovToken)
 

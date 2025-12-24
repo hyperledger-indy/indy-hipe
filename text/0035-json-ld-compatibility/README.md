@@ -54,7 +54,7 @@ OS. They don't need arbitrary semantic complexity.
 
 If we wanted to use email technology to send a verifiable credential, we would
 model the credential as an attachment, not enrich the schema of raw
-email message bodies. DIDComm invites a [similar approach](https://github.com/hyperledger/indy-hipe/pull/78).
+email message bodies. DIDComm invites a [similar approach](https://github.com/hyperledger-indy/indy-hipe/pull/78).
 
 ### Goal
 
@@ -85,7 +85,7 @@ JSON-LD constructs before embracing them in protocols with broad interoperabilit
 intentions, because of the [goal articulated above](#goal).
 
 * __The decorator concept in DIDComm is orthogonal to JSON-LD__, and is far more likely
-to be relevant to your early learning. See the [Decorator HIPE](https://github.com/hyperledger/indy-hipe/pull/71).
+to be relevant to your early learning. See the [Decorator HIPE](https://github.com/hyperledger-indy/indy-hipe/pull/71).
 
 That's it.
 
@@ -160,12 +160,12 @@ is automatically imputed to every DIDComm message:
 
 ```JSON
 "@context": {
-  "@vocab": "https://github.com/hyperledger/indy-hipe/"
+  "@vocab": "https://github.com/hyperledger-indy/indy-hipe/"
 }
 ```
 
 All decorators use the reserved prefix char `~` (tilde). For more on
-decorators, see the [Decorator HIPE](https://github.com/hyperledger/indy-hipe/pull/71).
+decorators, see the [Decorator HIPE](https://github.com/hyperledger-indy/indy-hipe/pull/71).
 
 #### Signing
 
@@ -178,7 +178,7 @@ sophistication and library dependencies.
 
 The DIDComm community is not opposed to using LD Signatures for problems that
 need them, but has decided not to adopt the mechanism across the board.
-There is [another signing mechanism](https://github.com/hyperledger/indy-hipe/pull/79)
+There is [another signing mechanism](https://github.com/hyperledger-indy/indy-hipe/pull/79)
 that is far simpler, and adequate for many scenarios. We’ll use whichever
 scheme is best suited to circumstances.
 
@@ -187,7 +187,7 @@ scheme is best suited to circumstances.
 DIDComm messages generally do not need [this feature of JSON-LD](
 https://w3c.github.io/json-ld-syntax/#type-coercion), because there are
 well understood [conventions around date-time datatypes](
-https://github.com/hyperledger/indy-hipe/pull/76), and individual
+https://github.com/hyperledger-indy/indy-hipe/pull/76), and individual
 HIPEs that define each message type can further clarify such subtleties.
 However, it is available on a message-type-definition basis (not ad hoc).
 
@@ -203,7 +203,7 @@ JSON-LD lets one field reference another. See [example 67](
 
 [JSON-LD describes a mechanism](https://w3c.github.io/json-ld-syntax/#string-internationalization)
 for this. It has approximately the same features as the one described in
-[indy-hipe PR #64](https://github.com/hyperledger/indy-hipe/pull/64/), with a few exceptions:
+[indy-hipe PR #64](https://github.com/hyperledger-indy/indy-hipe/pull/64/), with a few exceptions:
 
 * The JSON-LD mechanism only applies to strings; it is explicitly disallowed
 for describing dates, numbers, or any strings that coerce to dates or numbers.
@@ -211,7 +211,7 @@ for describing dates, numbers, or any strings that coerce to dates or numbers.
 For example, it doesn't specify sort order, time-of-day, or currency semantics.
 * There is no notion of a code that maps to strings--just a notion of strings
 that all have the same meaning. This means it doesn’t help us solve the
-problem of [locale-independent error codes](https://github.com/hyperledger/indy-hipe/pull/65).
+problem of [locale-independent error codes](https://github.com/hyperledger-indy/indy-hipe/pull/65).
 * The notion of mappings of values for different locales is separable into an
 external catalog, but only if a value is referenced or included implicitly in
 a doc. In other words, a processor has to see the full message catalog when
@@ -227,7 +227,7 @@ fact, and gets associated by convention.
 cases where key localization is desirable.
 
 Because of these misalignments, the DIDComm ecosystem plans to use [its own
-solution](https://github.com/hyperledger/indy-hipe/pull/64/) to this problem.
+solution](https://github.com/hyperledger-indy/indy-hipe/pull/64/) to this problem.
 
 #### Additional JSON-LD Constructs
 

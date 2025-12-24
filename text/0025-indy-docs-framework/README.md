@@ -26,12 +26,12 @@ We've created a proof of concept with five of the Indy repositories at the above
 ## Tutorial
 ### Relevant Repositories
 Here is a list of all the repositories in which we have documentation: 
-- indy-sdk: https://github.com/hyperledger/indy-sdk
-- indy-node: https://github.com/hyperledger/indy-node
-- indy-agent: https://github.com/hyperledger/indy-agent
-- indy-plenum: https://github.com/hyperledger/indy-plenum
-- indy-hipe*: https://github.com/hyperledger/indy-hipe
-- indy-crypto (soon to be ursa): https://github.com/hyperledger/indy-crypto
+- indy-sdk: https://github.com/hyperledger-indy/indy-sdk
+- indy-node: https://github.com/hyperledger-indy/indy-node
+- indy-agent: https://github.com/hyperledger-indy/indy-agent
+- indy-plenum: https://github.com/hyperledger-indy/indy-plenum
+- indy-hipe*: https://github.com/hyperledger-indy/indy-hipe
+- indy-crypto (soon to be ursa): https://github.com/hyperledger-indy/indy-crypto
 
 *See the minor [proposed changes](#indy-hipe-changes) to indy-hipe and its forks so it can be built with Sphinx and readthedocs.
 
@@ -165,7 +165,7 @@ if(on_rtd):
     if rtd_version not in ['stable', 'latest']:
         rtd_version = 'latest'
     try:
-        os.system("git clone https://github.com/hyperledger/indy-docs-conf.git remote_conf")
+        os.system("git clone https://github.com/hyperledger-indy/indy-docs-conf.git remote_conf")
         os.system("mv remote_conf/remote_conf.py .")
         import remote_conf
         remote_conf.generate_sidebar(globals(), nickname)

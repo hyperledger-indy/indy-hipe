@@ -105,9 +105,9 @@ Reviewers:
 - Outlined process for contributing and maintaining, improves the integrity and quality of our source code.
 ## Prior Art
 - This process has been used in the indy-node project with success. Extending it to Hyperledger Indy projects, in general, will be beneficial.
-https://github.com/hyperledger/indy-node#how-to-send-a-pr
-https://github.com/hyperledger/indy-node/blob/master/docs/write-code-guideline.md
-https://github.com/hyperledger/indy-node#how-to-contribute 
+https://github.com/hyperledger-indy/indy-node#how-to-send-a-pr
+https://github.com/hyperledger-indy/indy-node/blob/master/docs/write-code-guideline.md
+https://github.com/hyperledger-indy/indy-node#how-to-contribute 
 
 ## Unresolved Questions
 - In how to submit a pull request we reference a reviewer, but a reviewer is not defined in the terminology, should it be?

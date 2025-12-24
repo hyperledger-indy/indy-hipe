@@ -59,6 +59,6 @@ introducing this structure, necessary modifications will hopefully come to light
 - The structure formerly proposed included an `id` and generic `content` attributes in addition to the `type` attribute
   described as required here.
 
-[message-types]: https://github.com/hyperledger/indy-hipe/tree/master/text/0021-message-types
+[message-types]: https://github.com/hyperledger-indy/indy-hipe/tree/master/text/0021-message-types
 [agent-summit-slides]: https://docs.google.com/presentation/d/1l-po2IKVhXZHKlgpLba2RGq0Md9Rf19lDLEXMKwLdco/edit#slide=id.g29a85e4573632dc4_48
 [early-a2a-doc]: https://docs.google.com/document/d/1mRLPOK4VmU9YYdxHJSxgqBp19gNh3fT7Qk4Q069VPY8
